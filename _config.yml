@@ -1,0 +1,18 @@
+title: Функциональное программирование на Scala
+description: Курс по функциональному программированию на языке Scala
+theme: minima
+lang: ru
+
+# Настройки для навигации
+header_pages:
+  - index.md
+
+# Markdown настройки
+markdown: kramdown
+highlighter: rouge
+
+# Исключить из сборки
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
