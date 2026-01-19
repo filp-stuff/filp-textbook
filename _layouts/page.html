@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <a href="{{ '/' | relative_url }}" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        К содержанию
+      </a>
+    </div>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <nav class="lesson-nav">
+      {% assign lessons = site.pages | where_exp: "item", "item.path contains 'lessons/'" | sort: "path" %}
+      {% assign current_index = -1 %}
+      {% for lesson in lessons %}
+        {% if lesson.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if current_index > 0 %}
+        {% assign prev_lesson = lessons[current_index | minus: 1] %}
+        <a href="{{ prev_lesson.url | relative_url }}" class="nav-link prev">
+          <span class="nav-direction">← Предыдущий урок</span>
+          <span class="nav-title">{{ prev_lesson.title }}</span>
+        </a>
+      {% else %}
+        <div class="nav-placeholder"></div>
+      {% endif %}
+
+      {% assign next_index = current_index | plus: 1 %}
+      {% if next_index < lessons.size %}
+        {% assign next_lesson = lessons[next_index] %}
+        <a href="{{ next_lesson.url | relative_url }}" class="nav-link next">
+          <span class="nav-direction">Следующий урок →</span>
+          <span class="nav-title">{{ next_lesson.title }}</span>
+        </a>
+      {% else %}
+        <div class="nav-placeholder"></div>
+      {% endif %}
+    </nav>
+  </footer>
+</article>
