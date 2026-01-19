@@ -11,7 +11,6 @@ title: Главная
 
 ### Основы
 
-**1.** [Вводная](lessons/01-intro.html)
 **2.** [Базовый синтаксис](lessons/02-syntax.html)
 **3.** [Функции](lessons/03-functions.html)
 
