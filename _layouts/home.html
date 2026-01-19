@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <span class="hero-badge">Scala 3 + Cats</span>
+  <h1>Функциональное программирование на Scala</h1>
+  <p>Комплексный курс от основ синтаксиса до продвинутых абстракций: монады, аппликативы, эффекты и асинхронность</p>
+</div>
+
+<!-- Section: Basics -->
+<section class="course-section">
+  <h2>Основы</h2>
+  <div class="lessons-grid">
+    <a href="{{ '/lessons/02-syntax.html' | relative_url }}" class="lesson-card section-basics">
+      <div class="lesson-number">2</div>
+      <div class="lesson-title">
+        Базовый синтаксис
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Переменные, типы данных, операторы, условия и циклы в Scala</p>
+    </a>
+    <a href="{{ '/lessons/03-functions.html' | relative_url }}" class="lesson-card section-basics">
+      <div class="lesson-number">3</div>
+      <div class="lesson-title">
+        Функции
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Функции высшего порядка, каррирование, частичное применение</p>
+    </a>
+  </div>
+</section>
+
+<!-- Section: Types and Abstractions -->
+<section class="course-section">
+  <h2>Типы данных и абстракции</h2>
+  <div class="lessons-grid">
+    <a href="{{ '/lessons/04-adt-collections.html' | relative_url }}" class="lesson-card section-types">
+      <div class="lesson-number">4</div>
+      <div class="lesson-title">
+        ADT, коллекции, контейнеры
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Алгебраические типы данных, Option, Either, коллекции Scala</p>
+    </a>
+    <a href="{{ '/lessons/05-implicits-typeclasses.html' | relative_url }}" class="lesson-card section-types">
+      <div class="lesson-number">5</div>
+      <div class="lesson-title">
+        Implicits, typeclasses
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Неявные параметры, контекстные абстракции, классы типов</p>
+    </a>
+  </div>
+</section>
+
+<!-- Section: Functional Abstractions -->
+<section class="course-section">
+  <h2>Функциональные абстракции</h2>
+  <div class="lessons-grid">
+    <a href="{{ '/lessons/06-monoid-applicative.html' | relative_url }}" class="lesson-card section-abstractions">
+      <div class="lesson-number">6</div>
+      <div class="lesson-title">
+        Monoid, Applicative
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Полугруппы, моноиды, функторы и аппликативные функторы</p>
+    </a>
+    <a href="{{ '/lessons/07-monad.html' | relative_url }}" class="lesson-card section-abstractions">
+      <div class="lesson-number">7</div>
+      <div class="lesson-title">
+        Monad
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Монады, законы монад, трансформеры и композиция эффектов</p>
+    </a>
+  </div>
+</section>
+
+<!-- Section: Async and Effects -->
+<section class="course-section">
+  <h2>Асинхронность и эффекты</h2>
+  <div class="lessons-grid">
+    <a href="{{ '/lessons/08-async.html' | relative_url }}" class="lesson-card section-async">
+      <div class="lesson-number">8</div>
+      <div class="lesson-title">
+        Асинхронное выполнение
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Потоки, ExecutionContext, параллелизм и конкурентность</p>
+    </a>
+    <a href="{{ '/lessons/09-future.html' | relative_url }}" class="lesson-card section-async">
+      <div class="lesson-number">9</div>
+      <div class="lesson-title">
+        Future
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Асинхронные вычисления, комбинаторы Future, обработка ошибок</p>
+    </a>
+    <a href="{{ '/lessons/10-io-monad.html' | relative_url }}" class="lesson-card section-async">
+      <div class="lesson-number">10</div>
+      <div class="lesson-title">
+        Монада IO
+        <span class="lesson-arrow">→</span>
+      </div>
+      <p class="lesson-description">Чистые эффекты, Cats Effect IO, ресурсы и конкурентность</p>
+    </a>
+  </div>
+</section>
+
+{{ content }}
